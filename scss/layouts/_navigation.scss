@@ -1,0 +1,291 @@
+body {
+    background-color: brown;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.topNav {
+    margin: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 7.5rem;
+    color: $white;
+    position: relative;
+    z-index: 9;
+}
+
+#logo {
+    fill: $white;
+}
+
+.rightNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    nav ul {
+        display: none;
+    }
+}
+
+.lang {
+    margin-right: 1.25rem;
+    color: $white;
+    font-size: 0.85rem;
+    a {
+        padding: 0.25rem;
+        color: $white;
+    }
+}
+
+.toggler {
+    background-color: transparent;
+    width: 3rem;
+    border: 1px solid $btn_border;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+    span {
+        width: 50%;
+        height: 1px;
+        background-color: $white;
+        transition: all 400ms ease-in-out;
+        border-radius: 9px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .bar1 {
+        top: 45%;
+    }
+    .bar2 {
+        top: 55%;
+    }
+}
+
+.overlay {
+    display: none;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: $dark_blue;
+	overflow: auto;
+	z-index: 8;
+    align-items: flex-end;
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        padding-top: 5rem;
+    }
+    .leftBox {
+        padding: 2rem 1.5rem;
+        position: relative;
+        z-index: 9;
+        width: 100%;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        li a {
+            font-size: 1.65rem;
+            line-height: 3rem;
+            letter-spacing: 2px;
+        }
+    }
+    .social {
+        padding: 2rem 0;
+        font-size: 0.75rem;
+        a {
+            color: $white;
+            padding-right: 1.5rem;
+        }
+        i {
+            padding-right: 0.5rem;
+        }
+    }
+    .btmInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $dark_grey;
+        font-size: 0.85rem;
+    }
+    
+    .rightBox {
+        position: fixed;
+        top: 0;
+        opacity: 0.4;
+        width: 100%;
+        height: 100%;
+        background-image: url(../../assets/desktop/home.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        display: block;
+        .rightInfo {
+            display: none;
+        }
+    }
+}
+
+.is-open {
+    .bar1 {
+        transform: rotate(45deg);
+        top: 50%;
+        left: 25%;
+    }
+    .bar2 {
+        transform: rotate(-45deg);
+        top: 50%;
+        left: 25%;
+    }
+}
+
+@include md {
+    .topNav {
+        margin: 3rem 5rem;
+    }
+    .logo {
+        width: 12rem;
+    }
+    .toggler {
+        width: 4rem;
+        height: 4rem;
+    }
+    .lang {
+        margin-right: 2rem;
+        font-size: 1.25rem;
+        a {
+            font-size: 1.25rem;
+        }
+    }
+    .overlay {
+        .leftBox {
+            padding: 5rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        nav ul li {
+            padding: 1.5rem 0;
+            a {
+                font-size: 3.5rem;
+            }
+        }
+        .social {
+            padding: 4rem 0;
+            font-size: 1.25rem;
+            a {
+                padding-right: 3rem;
+            }
+            i {
+                padding-right: 1rem;
+            }
+        }
+        .btmInfo {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@include lg {
+    .rightNav {
+        width: 70%;
+        nav ul {
+            display: flex;
+            font-size: 0.85rem;
+            li {
+                margin: 0 0.5rem;
+                text-align: center;
+            }
+        }
+    }
+    .lang {
+        margin-right: 2rem;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        a {
+            font-size: 0.85rem;
+        }
+    }
+    .overlay {
+        nav ul li {
+            padding: 0.5rem 0;
+            a {
+                font-size: 2rem;
+            }
+        }
+        .leftBox {
+            padding: 1rem 5rem;
+        }
+        .social {
+            padding: 5rem 0;
+            font-size: 1rem;
+        }
+        .btmInfo {
+            font-size: 1rem;
+        }
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .lang a {
+                font-size: 1rem;
+            }
+        }
+        .rightBox {
+            width: 50%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-image: url(../../assets/desktop/home.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+@include xl {
+    .rightNav {
+        width: 75%;
+        nav ul {
+            font-size: 1rem;
+            li {
+                margin-right: 1.75rem;
+            }
+        }
+    }
+    .lang {
+        margin-right: 2rem;
+        font-size: 1rem;
+        a {
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
