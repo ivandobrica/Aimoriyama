@@ -60,14 +60,16 @@ ul {
 }
 
 body {
-  background-color: brown;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
 }
 
 .topNav {
-  margin: 1.5rem;
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem;
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,8 +83,6 @@ body {
 
 .logo {
   width: 7.5rem;
-  color: #fff;
-  position: relative;
   z-index: 9;
 }
 
@@ -229,6 +229,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.overlay .copyright {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
 }
@@ -266,7 +269,7 @@ body {
 
 @media (min-width: 768px) {
   .topNav {
-    margin: 3rem 5rem;
+    padding: 3rem 5rem;
   }
   .logo {
     width: 12rem;
@@ -312,7 +315,7 @@ body {
   .overlay .social i {
     padding-right: 1rem;
   }
-  .overlay .btmInfo {
+  .overlay .copyright {
     font-size: 1.25rem;
   }
 }
@@ -402,6 +405,182 @@ body {
   }
   .lang a {
     font-size: 1rem;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #131922;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
+
+.logoBox {
+  width: 4rem;
+  margin: 2rem;
+}
+
+#footerLogo {
+  fill: #fff;
+}
+
+.infoBox {
+  width: 100%;
+  background-color: #0D1117;
+}
+
+.footerLinks {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+
+.footerLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footerLinks ul li {
+  min-width: 40%;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.footerInfo {
+  padding: 0 1.5rem;
+  font-size: 0.75rem;
+}
+
+.footerInfo .footerSocial {
+  padding: 2rem 0;
+}
+
+.footerInfo .footerSocial a {
+  padding-right: 1.5rem;
+}
+
+.footerInfo .footerSocial i {
+  padding-right: 0.5rem;
+}
+
+.footerInfo .copyright {
+  padding: 1rem 0 3rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footerInfo::before {
+  content: "";
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: block;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footerLinks {
+    padding: 2rem 5rem;
+  }
+  .footerLinks ul li {
+    font-size: 1.25rem;
+  }
+  .footerInfo {
+    padding: 0 5rem;
+    font-size: 1rem;
+  }
+}
+
+main {
+  height: 100vh;
+}
+
+@media (min-width: 1025px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .logoBox {
+    width: 25%;
+    text-align: center;
+  }
+  .logoBox svg {
+    width: 8rem;
+  }
+  .footerLinks {
+    padding: 4rem 3rem;
+  }
+  .footerLinks ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .footerLinks ul li {
+    min-width: auto;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .footerInfo {
+    position: relative;
+    padding: 0 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footerInfo .footerSocial {
+    padding: 4rem 0;
+  }
+  .footerInfo .footerSocial a {
+    padding-right: 3rem;
+  }
+  .footerInfo .copyright {
+    padding: 0;
+  }
+  .footerInfo::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    width: calc(100% - 6rem);
+    padding: 0;
+  }
+}
+
+@media (min-width: 1201px) {
+  .footerLinks {
+    padding: 4rem 5rem;
+  }
+  .footerInfo {
+    padding: 0 5rem;
+  }
+  .footerInfo::before {
+    width: calc(100% - 10rem);
   }
 }
 /*# sourceMappingURL=main.css.map */
