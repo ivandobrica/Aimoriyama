@@ -77,11 +77,6 @@ footer {
     }
 }
 
-main {
-    height: 100vh;
-}
-
-
 @include lg {
     footer {
         flex-direction: row;

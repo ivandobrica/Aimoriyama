@@ -1,9 +1,33 @@
-@keyframes fade-in {
-    from {opacity: 0;}
-    to {opacity: 1;}
+@keyframes zoom-out {
+    from {
+        transform: scale(1.15);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
-@keyframes fade-out {
-    from {opacity: 1;}
-    to {opacity: 0;}
+@keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+    }
+    to {
+      stroke-dashoffset: 113px;
+    }
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
