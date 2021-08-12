@@ -3,9 +3,7 @@
     height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    @include flex($justify-content: flex-end, $flex-direction: column);
 
     .hero {
         background-color: black;
@@ -23,16 +21,14 @@
     }
     
     .bla {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex($justify-content: space-between, $align-items: center);
         margin: 1.5rem;
     }
 
     h1 {
         color: $white;
         font-size: 1.25rem;
-        margin: 3rem 1.5rem;
+        margin: 1rem 1.5rem;
         line-height: 1.5;
     }
 
@@ -40,9 +36,10 @@
         color: $white;
         font-size: 0.85rem;
         border: none;
-        padding-bottom: 0.85rem;
+        padding-bottom: 0.5rem;
         border-bottom: 1px solid $white;
         background: transparent;
+        cursor: pointer;
     }
 
     .bannerLoader {
@@ -57,9 +54,8 @@
         position: relative;
         height: 8px;
         width: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex($justify-content: center, $align-items: center);
+        cursor: pointer;
         svg {
             position: absolute;
             width: 26px;
@@ -106,28 +102,28 @@
 @include md {
     .banner {
         h1 {
-            margin: 3rem 5rem;
-            font-size: 2.5rem;
+            margin: 2rem 5rem;
+            font-size: 2rem;
         }
         .bla {
             margin: 3rem 5rem;
         }
         .circle {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             margin: 1.5rem;
             svg {
-                width: 39px;
-                height: 39px;
+                width: 32.5px;
+                height: 32.5px;
                 circle {
-                    r: 15;
-                    cx: 20;
-                    cy: 20;
+                    r: 12.5;
+                    cx: 16.5;
+                    cy: 16.5;
                 }
             }
         }
         .scrollBtn {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
     }
 }
@@ -140,11 +136,21 @@
         .bla {
             margin: 1rem 5rem 3rem;
         }
-        .circle svg {
-            circle {
-                r: 15;
-                cx: 19.5;
-                cy: 19.5;
+        .scrollBtn {
+            font-size: 0.825rem;
+        }
+        .circle {
+            width: 8px;
+            height: 8px;
+            margin: 1.5rem;
+            svg {
+                width: 30px;
+                height: 30px;
+                circle {
+                    r: 10;
+                    cx: 15;
+                    cy: 15;
+                }
             }
         }
     }

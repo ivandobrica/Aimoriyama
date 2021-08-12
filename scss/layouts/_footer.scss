@@ -1,8 +1,5 @@
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     background-color: $dark_blue;
     color: $white;
     a {
@@ -28,9 +25,7 @@ footer {
     position: relative;
     padding: 2rem 1.5rem;
     ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        @include flex($justify-content: space-between, $flex-wrap: wrap);
         li {
             min-width: 40%;
             padding: 1rem 0;
@@ -41,7 +36,7 @@ footer {
 
 .footerInfo {
     padding: 0 1.5rem;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     .footerSocial {
         padding: 2rem 0;
         a {
@@ -58,22 +53,25 @@ footer {
     &::before {
         content: "";
         height: 1px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: $grey_underline;
         display: block;
         padding: 0 1.5rem;
     }
 }
 
 @include md {
+    .logoBox {
+        width: 5rem;
+    }
     .footerLinks {
         padding: 2rem 5rem;
         ul li {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
     }
     .footerInfo {
         padding: 0 5rem;
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 }
 
@@ -85,7 +83,7 @@ footer {
         width: 25%;
         text-align: center;
         svg {
-            width: 8rem;
+            width: 6rem;
         }
     }
     .footerLinks {
@@ -95,16 +93,15 @@ footer {
             li {
                 min-width: auto;
                 padding: 0;
-                font-size: 1rem;
+                font-size: 0.825rem;
             }
         }
     }
     .footerInfo {
         position: relative;
         padding: 0 3rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex($justify-content: space-between, $align-items: center);
+        font-size: 0.7rem;
         .footerSocial {
             padding: 4rem 0;
             a {
@@ -123,7 +120,6 @@ footer {
             padding: 0;
         }
     }
-
 }
 
 @include xl {

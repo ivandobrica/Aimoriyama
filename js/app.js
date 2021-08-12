@@ -17,7 +17,7 @@ let scrollBtn = document.querySelector('.scrollBtn');
 scrollBtn.addEventListener('click', function(e){
     e.preventDefault();
     document.querySelector('#main').scrollIntoView({ 
-        behavior: 'smooth' 
+        behavior: 'smooth'
       });
 });
 
@@ -26,12 +26,13 @@ $(document).ready(function(){
     $(".toggler").click(function(){
         $(".overlay").fadeToggle(400);
         $(".rightNav nav").fadeToggle(400);
+        $(".rightNav .lang").fadeToggle(400);
     });
 });
 
 //hero image slider
-var slideIndex = 0;
-var slideIndexCurrent = 0;
+let slideIndex = 0;
+let slideIndexCurrent = 0;
 showSlides();
 //showSlidesCurrent(slideIndexCurrent);
 function currentSlide(n) {
@@ -43,9 +44,9 @@ function currentSlide(n) {
 }
 function showSlidesCurrent(n) {
   //var slideIndex = 1;
-  var i;
-  var slides = document.getElementsByClassName("hero");
-  var dots = document.getElementsByClassName("circle");
+  let i;
+  let slides = document.getElementsByClassName("hero");
+  let dots = document.getElementsByClassName("circle");
   if (n > slides.length) {slideIndexCurrent = 1}   
 
   if (n < 0) {slideIndexCurrent = slides.length}
@@ -62,9 +63,9 @@ function showSlidesCurrent(n) {
 }
 /*** SHOW SLIDE with timer ***/
 function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("hero");
-  var dots = document.getElementsByClassName("circle");
+  let i;
+  let slides = document.getElementsByClassName("hero");
+  let dots = document.getElementsByClassName("circle");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
@@ -78,3 +79,23 @@ function showSlides() {
   setTimeout(showSlides, 8000);
 }
 //  showSlidesCurrent(slideIndexCurrent);
+
+//parallax effect on followUs section
+(function($) {
+  /** change value here to adjust parallax level */
+  var parallax = -0.8;
+
+  var $bg_images = $(".parallax");
+  var offset_tops = [];
+  $bg_images.each(function(i, el) {
+    offset_tops.push($(el).offset().top);
+  });
+
+  $(window).scroll(function() {
+    var dy = $(this).scrollTop();
+    $bg_images.each(function(i, el) {
+      var ot = offset_tops[i];
+      $(el).css("background-position", "50% " + (dy - ot) * parallax + "px");
+    });
+  });
+})(jQuery);

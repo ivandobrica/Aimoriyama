@@ -1,17 +1,9 @@
-body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
 .topNav {
     position: fixed;
     width: 100%;
     padding: 1.5rem;
     z-index: 9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex($justify-content: space-between, $align-items: center);
 }
 
 .logo {
@@ -24,9 +16,7 @@ body {
 }
 
 .rightNav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @include flex($justify-content: flex-end, $align-items: center);
     position: relative;
     nav ul {
         display: none;
@@ -83,9 +73,7 @@ body {
     .content {
         height: 100%;
         width: 100%;
-        display: flex;
-        align-items: flex-end;
-        flex-wrap: wrap;
+        @include flex($align-items: flex-end, $flex-wrap: wrap);
         padding-top: 5rem;
     }
     .leftBox {
@@ -96,9 +84,7 @@ body {
     }
     nav ul {
         list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        @include flex($justify-content: flex-end, $flex-direction: column);
         li a {
             font-size: 1.65rem;
             line-height: 3rem;
@@ -117,9 +103,7 @@ body {
         }
     }
     .btmInfo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex($justify-content: space-between, $align-items: center);
     }
 
     .copyright {
@@ -162,93 +146,97 @@ body {
         padding: 3rem 5rem;
     }
     .logo {
-        width: 12rem;
+        width: 10rem;
     }
     .toggler {
-        width: 4rem;
-        height: 4rem;
+        width: 3.5rem;
+        height: 3.5rem;
     }
     .lang {
         margin-right: 2rem;
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         a {
-            font-size: 1.25rem;
+            font-size: 1.05rem;
         }
     }
     .overlay {
         .leftBox {
             padding: 5rem;
             width: 100%;
+            @include flex($justify-content: flex-end, $flex-direction: column);
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
         }
         nav ul li {
             padding: 1.5rem 0;
             a {
-                font-size: 3.5rem;
+                font-size: 1.75rem;
+                line-height: 1rem;
             }
         }
         .social {
             padding: 4rem 0;
-            font-size: 1.25rem;
+            font-size: 1.05rem;
             a {
                 padding-right: 3rem;
             }
             i {
-                padding-right: 1rem;
+                padding-right: 1.05rem;
             }
         }
         .copyright {
-            font-size: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .wrapper {
+            @include flex($justify-content: flex-start, $flex-direction: column);
         }
     }
 }
 
 @include lg {
     .rightNav {
-        width: 70%;
+        width: 80%;
         nav ul {
             display: flex;
-            font-size: 0.85rem;
+            font-size: 0.825rem;
             li {
-                margin: 0 0.5rem;
+                margin: 0 1rem;
                 text-align: center;
             }
         }
     }
+    .toggler {
+        width: 3rem;
+        height: 3rem;
+    }
     .lang {
         margin-right: 2rem;
         font-size: 0.85rem;
-        display: flex;
-        align-items: center;
+        @include flex($align-items: center);
         a {
-            font-size: 0.85rem;
+            font-size: 0.825rem;
         }
     }
     .overlay {
         nav ul li {
             padding: 0.5rem 0;
             a {
-                font-size: 2rem;
+                line-height: 3rem;
             }
         }
         .leftBox {
             padding: 1rem 5rem;
         }
         .social {
-            padding: 5rem 0;
-            font-size: 1rem;
+            padding: 2rem 0;
+            font-size: 0.825rem;
         }
-        .btmInfo {
-            font-size: 1rem;
+        .copyright {
+            font-size: 0.825rem;
         }
         .wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flex($justify-content: space-between, $align-items: center, $flex-direction: row);
             .lang a {
-                font-size: 1rem;
+                font-size: 0.825rem;
             }
         }
         .rightBox {
@@ -266,19 +254,8 @@ body {
 
 @include xl {
     .rightNav {
-        width: 75%;
-        nav ul {
-            font-size: 1rem;
-            li {
-                margin-right: 1.75rem;
-            }
-        }
-    }
-    .lang {
-        margin-right: 2rem;
-        font-size: 1rem;
-        a {
-            font-size: 1rem;
+        nav ul li {
+            margin-right: 1.5rem;
         }
     }
 }
