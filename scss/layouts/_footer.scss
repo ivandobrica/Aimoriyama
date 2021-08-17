@@ -1,135 +1,137 @@
-footer {
+.footer {
     @include flex($justify-content: center, $align-items: center, $flex-direction: column);
     background-color: $dark_blue;
     color: $white;
     a {
         color: $white;
     }
-}
 
-.logoBox {
-    width: 4rem;
-    margin: 2rem;
-}
-
-#footerLogo {
-    fill: $white;
-}
-
-.infoBox {
-    width: 100%;
-    background-color: $footer_black;
-}
-
-.footerLinks {
-    position: relative;
-    padding: 2rem 1.5rem;
-    ul {
+    &__logo {
+        width: 4rem;
+        margin: 2rem;
+    }
+    .logo-inner {
+        fill: $white;
+    }
+    &__content {
+        width: 100%;
+        background-color: $footer_black;
+    }
+    &__list-wrapper {
+        position: relative;
+        padding: 2rem 1.5rem;
+    }
+    &__list {
         @include flex($justify-content: space-between, $flex-wrap: wrap);
-        li {
-            min-width: 40%;
-            padding: 1rem 0;
+    }
+    &__item {
+        min-width: 40%;
+        padding: 1rem 0;
+        font-size: 0.875rem;
+    }
+    &__info {
+        padding: 0 1.5rem;
+        font-size: 0.7rem;
+        &::before {
+            content: "";
+            height: 1px;
+            background-color: $grey_underline;
+            display: block;
+            padding: 0 1.5rem;
+        }
+    }
+
+    .social {
+        padding: 2rem 0;
+        &__item {
+            padding-right: 1.5rem;
+        }
+        .fab {
+            padding-right: 0.5rem;
+        }
+    }
+    
+    .copyright {
+        padding: 1rem 0 3rem;
+        color: $dark_grey;
+    }
+}
+
+@include md {
+    .footer {
+        &__logo {
+            width: 5rem;
+        }
+        &__list-wrapper {
+            padding: 2rem 5rem;
+        }
+        &__item {
+            font-size: 1rem;
+        }
+        &__info {
+            padding: 0 5rem;
             font-size: 0.875rem;
         }
     }
 }
 
-.footerInfo {
-    padding: 0 1.5rem;
-    font-size: 0.7rem;
-    .footerSocial {
-        padding: 2rem 0;
-        a {
-            padding-right: 1.5rem;
-        }
-        i {
-            padding-right: 0.5rem;
-        }
-    }
-    .copyright {
-        padding: 1rem 0 3rem;
-        color: $dark_grey;
-    }
-    &::before {
-        content: "";
-        height: 1px;
-        background-color: $grey_underline;
-        display: block;
-        padding: 0 1.5rem;
-    }
-}
-
-@include md {
-    .logoBox {
-        width: 5rem;
-    }
-    .footerLinks {
-        padding: 2rem 5rem;
-        ul li {
-            font-size: 1rem;
-        }
-    }
-    .footerInfo {
-        padding: 0 5rem;
-        font-size: 0.875rem;
-    }
-}
-
 @include lg {
-    footer {
+    .footer {
         flex-direction: row;
-    }
-    .logoBox {
-        width: 25%;
-        text-align: center;
-        svg {
+        &__logo {
+            width: 25%;
+            text-align: center;
+        }
+        .svg {
             width: 6rem;
         }
-    }
-    .footerLinks {
-        padding: 4rem 3rem;
-        ul {
+        &__list-wrapper {
+            padding: 4rem 3rem;
+        }
+        &__list {
             flex-wrap: nowrap;
-            li {
-                min-width: auto;
+        }
+        &__item {
+            min-width: auto;
+            padding: 0;
+            font-size: 0.825rem;
+        }
+        &__info {
+            position: relative;
+            padding: 0 3rem;
+            @include flex($justify-content: space-between, $align-items: center);
+            font-size: 0.7rem;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                width: calc(100% - 6rem);
                 padding: 0;
-                font-size: 0.825rem;
             }
         }
-    }
-    .footerInfo {
-        position: relative;
-        padding: 0 3rem;
-        @include flex($justify-content: space-between, $align-items: center);
-        font-size: 0.7rem;
-        .footerSocial {
+        .social {
             padding: 4rem 0;
-            a {
+            &__item {
                 padding-right: 3rem;
             }
         }
         .copyright {
             padding: 0;
         }
-        &::before {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            width: calc(100% - 6rem);
-            padding: 0;
-        }
     }
 }
 
 @include xl {
-    .footerLinks {
-        padding: 4rem 5rem;
-    }
-    .footerInfo {
-        padding: 0 5rem;
-        &::before {
-            width: calc(100% - 10rem);
+    .footer {
+        &__list-wrapper {
+            padding: 4rem 5rem;
+        }
+        &__info {
+            padding: 0 5rem;
+            &::before {
+                width: calc(100% - 10rem);
+            }
         }
     }
 }

@@ -4,17 +4,9 @@
     background-image: url(../../assets/mobile/followus.jpg);
     background-attachment: fixed;
     background-size: cover;
-
-    .wrapper {
+    &__wrapper {
         width: 100%;
         color: $white;
-    }
-
-    .box-wrapper {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        margin: 1.5rem 0;
     }
 
     .box {
@@ -26,10 +18,16 @@
         background-size: cover;
         transition: transform 500ms linear;
         overflow: hidden;
-        a {
+        &__wrapper {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 1.5rem 0;
+        }
+        &__link {
             @include flex($justify-content: center, $align-items: center, $flex-direction: column);
             color: $white;
-            i {
+            .fab {
                 padding: 1rem;
                 font-size: 2rem;
             }
@@ -54,35 +52,37 @@
     .parallax {
         background-image: url(../../assets/desktop/followus.jpg);
         @include flex($justify-content: center, $align-items: center);
-        .wrapper {
+        &__wrapper {
             width: 90%;
             @include flex($justify-content: space-between, $flex-wrap: wrap);
-            h2 {
-                width: 100%;
-                font-size: 1.75rem;
-            }
         }
-        .box-wrapper {
-            width: 33%;
-            overflow: hidden;
+        &__title {
+            width: 100%;
+            font-size: 1.75rem;
         }
+
         .box {
             width: 100%;
             padding: 30% 2rem;
+            &__wrapper {
+                width: 33%;
+                overflow: hidden;
+            }
         }
     }
 }
 
 @include lg {
     .parallax {
-        .wrapper {
+        &__wrapper {
             margin: 4rem 0;
             flex-wrap: nowrap;
-            h2 {
-                width: 26%;
-            }
         }
-        .box-wrapper {
+        &__title {
+            width: 26%;
+        }
+    
+        .box__wrapper {
             width: 24%;
             margin: 0;
         }

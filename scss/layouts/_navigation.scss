@@ -1,66 +1,90 @@
-.topNav {
+.main-nav {
+    transition: background-color 0.5s, padding 0.5s;
     position: fixed;
     width: 100%;
     padding: 1.5rem;
     z-index: 9;
     @include flex($justify-content: space-between, $align-items: center);
-}
-
-.logo {
-    width: 7.5rem;
-    z-index: 9;
-}
-
-#logo {
-    fill: $white;
-}
-
-.rightNav {
-    @include flex($justify-content: flex-end, $align-items: center);
-    position: relative;
-    nav ul {
+    &__wrapper {
+        @include flex($justify-content: flex-end, $align-items: center);
+        position: relative;
+    }
+    &__list {
         display: none;
     }
-}
 
-.lang {
-    margin-right: 1.25rem;
-    color: $white;
-    font-size: 0.85rem;
-    a {
-        padding: 0.25rem;
-        color: $white;
+    .logo {
+        width: 7.5rem;
+        z-index: 9;
+        &-inner {
+            fill: $black;
+        }
+        &-white {
+            fill: white;
+        }
     }
-}
 
-.toggler {
-    background-color: transparent;
-    width: 3rem;
-    border: 1px solid $btn_border;
-    height: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    z-index: 9;
-    span {
-        width: 50%;
-        height: 1px;
+    .lang {
+        margin-right: 1.25rem;
+        color: $black;
+        font-size: 0.85rem;
+        &__item {
+            padding: 0.25rem;
+            color: $black;
+        }
+        &-white {
+            color: white;
+        }
+    }
+
+    .toggler {
         background-color: $white;
-        transition: all 400ms ease-in-out;
-        border-radius: 9px;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
+        width: 3rem;
+        border: 1px solid $btn_border;
+        height: 3rem;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        z-index: 9;
+        span {
+            width: 50%;
+            height: 1px;
+            background-color: $black;
+            transition: all 400ms ease-in-out;
+            border-radius: 9px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        &-transparent {
+            background-color: transparent;
+            span {
+                background-color: $white;
+            }
+        }
+        &__bar1 {
+            top: 45%;
+        }
+        &__bar2 {
+            top: 55%;
+        }
     }
-    .bar1 {
-        top: 45%;
-    }
-    .bar2 {
-        top: 55%;
+
+    .is-open {
+        .toggler__bar1 {
+            transform: rotate(45deg);
+            top: 50%;
+            left: 25%;
+        }
+        .toggler__bar2 {
+            transform: rotate(-45deg);
+            top: 50%;
+            left: 25%;
+        }
     }
 }
 
-.overlay {
+.nav-overlay {
     display: none;
 	position: fixed;
 	top: 0;
@@ -70,48 +94,29 @@
 	overflow: auto;
 	z-index: 8;
     align-items: flex-end;
-    .content {
+    &__wrapper{
         height: 100%;
         width: 100%;
         @include flex($align-items: flex-end, $flex-wrap: wrap);
         padding-top: 5rem;
     }
-    .leftBox {
+    &__content {
         padding: 2rem 1.5rem;
         position: relative;
         z-index: 9;
         width: 100%;
     }
-    nav ul {
+    &__list {
         list-style: none;
         @include flex($justify-content: flex-end, $flex-direction: column);
-        li a {
-            font-size: 1.65rem;
-            line-height: 3rem;
-            letter-spacing: 2px;
-        }
     }
-    .social {
-        padding: 2rem 0;
-        font-size: 0.75rem;
-        a {
-            color: $white;
-            padding-right: 1.5rem;
-        }
-        i {
-            padding-right: 0.5rem;
-        }
+    &__links {
+        font-size: 1.65rem;
+        line-height: 3rem;
+        letter-spacing: 2px;
+        color: $white;
     }
-    .btmInfo {
-        @include flex($justify-content: space-between, $align-items: center);
-    }
-
-    .copyright {
-        color: $dark_grey;
-        font-size: 0.85rem;
-    }
-    
-    .rightBox {
+    &__image {
         position: fixed;
         top: 0;
         opacity: 0.3;
@@ -122,56 +127,72 @@
         background-size: 100% 100%;
         background-position: center;
         display: block;
-        .rightInfo {
-            display: none;
+    }
+    &__info {
+        @include flex($justify-content: space-between, $align-items: center);
+    }
+
+    .lang {
+        color: $white;
+        &__item {
+            color: $white;
         }
+    }
+
+    .social {
+        padding: 2rem 0;
+        font-size: 0.75rem;
+        &__links {
+            color: $white;
+            padding-right: 1.5rem;
+        }
+        .fab {
+            padding-right: 0.5rem;
+        }
+    }
+
+    .copyright {
+        color: $dark_grey;
+        font-size: 0.85rem;
     }
 }
 
-.is-open {
-    .bar1 {
-        transform: rotate(45deg);
-        top: 50%;
-        left: 25%;
-    }
-    .bar2 {
-        transform: rotate(-45deg);
-        top: 50%;
-        left: 25%;
-    }
-}
 
 @include md {
-    .topNav {
+    .main-nav {
         padding: 3rem 5rem;
-    }
-    .logo {
-        width: 10rem;
-    }
-    .toggler {
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-    .lang {
-        margin-right: 2rem;
-        font-size: 1.15rem;
-        a {
-            font-size: 1.05rem;
+        .logo {
+            width: 10rem;
+        }
+        .toggler {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+        .lang {
+            margin-right: 2rem;
+            font-size: 1.15rem;
+            &__item {
+                font-size: 1.05rem;
+            }
         }
     }
-    .overlay {
-        .leftBox {
+
+    .nav-overlay {
+        &__content {
             padding: 5rem;
             width: 100%;
             @include flex($justify-content: flex-end, $flex-direction: column);
             display: flex;
         }
-        nav ul li {
+        &__item {
             padding: 1.5rem 0;
-            a {
-                font-size: 1.75rem;
-                line-height: 1rem;
-            }
+        }
+        &__links{
+            font-size: 1.75rem;
+            line-height: 1rem;
+        }
+        &__inner {
+            @include flex($justify-content: flex-start, $flex-direction: column);
         }
         .social {
             padding: 4rem 0;
@@ -186,60 +207,55 @@
         .copyright {
             font-size: 1.05rem;
         }
-        .wrapper {
-            @include flex($justify-content: flex-start, $flex-direction: column);
-        }
     }
 }
 
 @include lg {
-    .rightNav {
-        width: 80%;
-        nav ul {
+    .main-nav {
+        &__wrapper {
+            width: 80%;
+        }
+        &__list {
             display: flex;
             font-size: 0.825rem;
-            li {
-                margin: 0 1rem;
-                text-align: center;
-            }
         }
-    }
-    .toggler {
-        width: 3rem;
-        height: 3rem;
-    }
-    .lang {
-        margin-right: 2rem;
-        font-size: 0.85rem;
-        @include flex($align-items: center);
-        a {
-            font-size: 0.825rem;
+        &__item {
+            margin: 0 1rem;
+            text-align: center;
         }
-    }
-    .overlay {
-        nav ul li {
-            padding: 0.5rem 0;
-            a {
-                line-height: 3rem;
-            }
+        &__links {
+            color: $white;
         }
-        .leftBox {
-            padding: 1rem 5rem;
+
+        .toggler {
+            width: 3rem;
+            height: 3rem;
         }
-        .social {
-            padding: 2rem 0;
-            font-size: 0.825rem;
-        }
-        .copyright {
-            font-size: 0.825rem;
-        }
-        .wrapper {
-            @include flex($justify-content: space-between, $align-items: center, $flex-direction: row);
-            .lang a {
+
+        .lang {
+            margin-right: 2rem;
+            font-size: 0.85rem;
+            @include flex($align-items: center);
+            &__item {
                 font-size: 0.825rem;
             }
         }
-        .rightBox {
+    }
+
+    .nav-overlay {
+        &__item {
+            padding: 0.5rem 0;
+        }
+        &__links {
+            line-height: 3rem;
+        }
+        &__content {
+            padding: 1rem 5rem;
+        }
+        &__inner {
+            @include flex($justify-content: space-between, $align-items: center, $flex-direction: row);
+        }
+        &__image {
             width: 50%;
             position: fixed;
             top: 0;
@@ -249,17 +265,36 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
-    }
-}
-
-@include xl {
-    .rightNav {
-        nav ul li {
-            margin-right: 1.5rem;
+        .social {
+            padding: 2rem 0;
+            font-size: 0.825rem;
+        }
+        .copyright {
+            font-size: 0.825rem;
+        }
+        .lang {
+            margin-right: 2rem;
+            font-size: 0.85rem;
+            &__item {
+                font-size: 0.825rem;
+            }
         }
     }
 }
 
+@include xl {
+    .main-nav__item {
+        margin-right: 1.5rem;
+    }
+}
+
+.is-scrolled {
+    background-color: $dark_blue;
+    padding: 0.5rem 1.5rem;
+    @include md {
+        padding: 1rem 5rem;
+    }
+}
 
 
 

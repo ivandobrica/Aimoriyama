@@ -4,8 +4,7 @@
     overflow: hidden;
     position: relative;
     @include flex($justify-content: flex-end, $flex-direction: column);
-
-    .hero {
+    &__hero {
         background-color: black;
         display: none;
         animation: zoom-out 8s linear, fade 8s linear;
@@ -19,20 +18,18 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
-    .bla {
-        @include flex($justify-content: space-between, $align-items: center);
-        margin: 1.5rem;
-    }
-
-    h1 {
+    &__title {
         color: $white;
         font-size: 1.25rem;
         margin: 1rem 1.5rem;
         line-height: 1.5;
     }
+    &__info {
+        @include flex($justify-content: space-between, $align-items: center);
+        margin: 1.5rem;
+    }
 
-    .scrollBtn {
+    .scroll-btn {
         color: $white;
         font-size: 0.85rem;
         border: none;
@@ -42,28 +39,26 @@
         cursor: pointer;
     }
 
-    .bannerLoader {
+    .loader {
         display: flex;
-    }
-
-    .circle {
-        background-color: transparent;
-        margin: 0.85rem;
-        border-radius: 50%;
-        border: 1px solid $dark_grey;
-        position: relative;
-        height: 8px;
-        width: 8px;
-        @include flex($justify-content: center, $align-items: center);
-        cursor: pointer;
-        svg {
+        &__circle {
+            background-color: transparent;
+            margin: 0.85rem;
+            border-radius: 50%;
+            border: 1px solid $dark_grey;
+            position: relative;
+            height: 8px;
+            width: 8px;
+            @include flex($justify-content: center, $align-items: center);
+            cursor: pointer;
+        }
+        .svg {
             position: absolute;
             width: 26px;
             height: 26px;
             transform: rotateY(-180deg) rotateZ(-90deg);
-          }
-          
-          svg circle {
+        }
+        .svg__circle {
             stroke-dasharray: 113px;
             stroke-dashoffset: 0px;
             stroke-linecap: round;
@@ -73,56 +68,56 @@
         }
     }
 
-    .active {
-        &.circle {
+    .is-active {
+        &.loader__circle {
             background-color: $white;
         }
-        svg {
-            circle {
-                stroke-width: 1px;
-                animation: countdown 8s linear forwards;
-            }
+        .svg__circle {
+            stroke-width: 1px;
+            animation: countdown 8s linear forwards;
         }
     }
-}
 
-.hero1 {
-    background-image: url(../../assets/mobile/hero1.jpg);
-}
-.hero2 {
-    background-image: url(../../assets/mobile/hero2.jpg);
-}
-.hero3 {
-    background-image: url(../../assets/mobile/hero3.jpg);
-}
-.hero4 {
-    background-image: url(../../assets/mobile/hero4.jpg);
+    .hero1 {
+        background-image: url(../../assets/mobile/hero1.jpg);
+    }
+    .hero2 {
+        background-image: url(../../assets/mobile/hero2.jpg);
+    }
+    .hero3 {
+        background-image: url(../../assets/mobile/hero3.jpg);
+    }
+    .hero4 {
+        background-image: url(../../assets/mobile/hero4.jpg);
+    }
 }
   
 @include md {
     .banner {
-        h1 {
+        &__title {
             margin: 2rem 5rem;
             font-size: 2rem;
         }
-        .bla {
+        &__info {
             margin: 3rem 5rem;
         }
-        .circle {
-            width: 10px;
-            height: 10px;
-            margin: 1.5rem;
-            svg {
+        .loader {
+            &__circle {
+                width: 10px;
+                height: 10px;
+                margin: 1.5rem;
+            }
+            .svg {
                 width: 32.5px;
                 height: 32.5px;
-                circle {
-                    r: 12.5;
-                    cx: 16.5;
-                    cy: 16.5;
-                }
+            }
+            .svg__circle {
+                r: 12.5;
+                cx: 16.5;
+                cy: 16.5;
             }
         }
-        .scrollBtn {
+        .scroll-btn {
             font-size: 1rem;
         }
     }
@@ -130,40 +125,42 @@
 
 @include lg {
     .banner {
-        h1 {
+        &__title {
             margin: 1rem 5rem;
         }
-        .bla {
+        &__info {
             margin: 1rem 5rem 3rem;
         }
-        .scrollBtn {
+        .scroll-btn {
             font-size: 0.825rem;
         }
-        .circle {
-            width: 8px;
-            height: 8px;
-            margin: 1.5rem;
-            svg {
+        .loader {
+            &__circle {
+                width: 8px;
+                height: 8px;
+                margin: 1.5rem;
+            }
+            .svg {
                 width: 30px;
                 height: 30px;
-                circle {
-                    r: 10;
-                    cx: 15;
-                    cy: 15;
-                }
+            }
+            .svg__circle {
+                r: 10;
+                cx: 15;
+                cy: 15;
             }
         }
-    }
-    .hero1 {
-        background-image: url(../../assets/desktop/hero1.jpg);
-    }
-    .hero2 {
-        background-image: url(../../assets/desktop/hero2.jpg);
-    }
-    .hero3 {
-        background-image: url(../../assets/desktop/hero3.jpg);
-    }
-    .hero4 {
-        background-image: url(../../assets/desktop/hero4.jpg);
+        .hero1 {
+            background-image: url(../../assets/desktop/hero1.jpg);
+        }
+        .hero2 {
+            background-image: url(../../assets/desktop/hero2.jpg);
+        }
+        .hero3 {
+            background-image: url(../../assets/desktop/hero3.jpg);
+        }
+        .hero4 {
+            background-image: url(../../assets/desktop/hero4.jpg);
+        }
     }
 }
