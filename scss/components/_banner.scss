@@ -29,6 +29,10 @@
         margin: 1.5rem;
     }
 
+    .new-line {
+        display: block;
+    }
+
     .scroll-btn {
         color: $white;
         font-size: 0.85rem;
@@ -45,7 +49,7 @@
             background-color: transparent;
             margin: 0.85rem;
             border-radius: 50%;
-            border: 1px solid $dark_grey;
+            border: 1px solid $copywrite_dark-grey;
             position: relative;
             height: 8px;
             width: 8px;

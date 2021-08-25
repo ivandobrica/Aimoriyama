@@ -1,5 +1,5 @@
 .journal {
-    padding: 3rem 1.5rem;
+    padding: 9rem 1.5rem 2rem;
     &__header {
         margin-bottom: 2rem;
         @include flex($justify-content: space-between, $align-items: center);
@@ -44,19 +44,53 @@
             margin: 0.5rem 0;
         }
         &__date {
-            color: $light-grey;
+            color: $journal-date_light-grey;
         }
         &__title {
             padding: 0.25rem 0;
             font-size: 0.8rem;
         }
     }
+
+    .pagination {
+        text-align: center;
+        margin: 3rem 0;
+        padding: 3rem 0;
+        border-top: 1px solid $silver_underline;
+        border-bottom: 1px solid $silver_underline;
+        a {
+            padding: 0.5rem;
+            margin: 0.25rem;
+            border-radius: 10px;
+            &:hover {
+                background-color: $silver_underline;
+            }
+        }
+    }
+    
+    .is-active {
+        background: $dark_blue;
+        color: $white;
+    }
+
+    .is-disabled {
+        color: $lightgray_pagination;
+        pointer-events: none;
+    }
 }
 
 @include md {
     .journal {
         padding: 3rem 5rem;
+        // padding-top: 10rem;
+        &__title {
+            font-size: 2rem;
+        }
+        &__blog-wrapper {
+            @include flex($align-items: center)
+        }
         .blog {
+            margin-right: 2rem;
             width: 45%;
         }
     }
@@ -65,7 +99,21 @@
 @include lg {
     .journal {
         .blog {
-            width: 30%;
+            width: 35%;
+        }
+    }
+}
+
+.journal-page {
+    padding: 10rem 8rem 3rem;
+    @include lg {
+        .journal {
+            &__header {
+                margin-bottom: 5rem;
+            }
+            &__title {
+                font-size: 3rem;
+            }
         }
     }
 }

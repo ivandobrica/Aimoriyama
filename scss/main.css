@@ -158,6 +158,10 @@ ul {
   margin: 1.5rem;
 }
 
+.banner .new-line {
+  display: block;
+}
+
 .banner .scroll-btn {
   color: #fff;
   font-size: 0.85rem;
@@ -454,7 +458,7 @@ ul {
   display: inline-block;
 }
 
-.pages .contact {
+.pages .contact-us {
   border-top: 1px solid #E3E3E3;
 }
 
@@ -478,14 +482,14 @@ ul {
     font-size: 2.25rem;
     margin-bottom: 1rem;
   }
-  .pages .contact {
+  .pages .contact-us {
     border-top: none;
     border-left: 1px solid #E3E3E3;
   }
 }
 
 .journal {
-  padding: 3rem 1.5rem;
+  padding: 9rem 1.5rem 2rem;
 }
 
 .journal__header {
@@ -562,18 +566,297 @@ ul {
   font-size: 0.8rem;
 }
 
+.journal .pagination {
+  text-align: center;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid #E3E3E3;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.journal .pagination a {
+  padding: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 10px;
+}
+
+.journal .pagination a:hover {
+  background-color: #E3E3E3;
+}
+
+.journal .is-active {
+  background: #131922;
+  color: #fff;
+}
+
+.journal .is-disabled {
+  color: #d3d3d3;
+  pointer-events: none;
+}
+
 @media (min-width: 768px) {
   .journal {
     padding: 3rem 5rem;
   }
+  .journal__title {
+    font-size: 2rem;
+  }
+  .journal__blog-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .journal .blog {
+    margin-right: 2rem;
     width: 45%;
   }
 }
 
 @media (min-width: 1025px) {
   .journal .blog {
+    width: 35%;
+  }
+}
+
+.journal-page {
+  padding: 10rem 8rem 3rem;
+}
+
+@media (min-width: 1025px) {
+  .journal-page .journal__header {
+    margin-bottom: 5rem;
+  }
+  .journal-page .journal__title {
+    font-size: 3rem;
+  }
+}
+
+.contact {
+  padding: 9rem 1.5rem 0rem;
+  line-height: 1.5;
+}
+
+.contact__header {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__subheader {
+  font-size: 0.75rem;
+  position: relative;
+  padding-left: 10px;
+}
+
+.contact__subheader::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: rgba(19, 25, 34, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.contact__subheader-wrapper {
+  margin: 2rem 0;
+}
+
+.contact__subheader-item {
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+}
+
+.contact .card__text {
+  font-size: 0.875rem;
+}
+
+.contact .card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.contact .card__info-wrapper {
+  margin-top: 2.5rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid #E3E3E3;
+}
+
+.contact .card__info-tell, .contact .card__info-mail {
+  width: 5rem;
+  color: rgba(19, 25, 34, 0.5);
+}
+
+.contact .new-line {
+  display: block;
+}
+
+.access {
+  background-color: #FAFAFA;
+  padding: 2.5rem 1.5rem 4.5rem;
+  line-height: 1.5;
+}
+
+.access__subheader {
+  font-size: 0.75rem;
+  position: relative;
+  padding-left: 10px;
+}
+
+.access__subheader::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: rgba(19, 25, 34, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.access__subheader-wrapper {
+  margin-top: 2rem;
+}
+
+.access__subheader-item {
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+}
+
+.access .card__info {
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.access .card__info-access, .access .card__info-address {
+  color: rgba(19, 25, 34, 0.8);
+  padding: 0.25rem 0;
+}
+
+.access .card__info-subheader {
+  padding: 0.5rem 0;
+}
+
+.access .card__info-text {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: 10rem 5rem 2rem;
+  }
+  .contact__title {
+    font-size: 2rem;
+  }
+  .access {
+    padding: 2.5rem 5rem 4.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact {
+    padding: 10rem 8rem 3rem;
+  }
+  .contact__header {
+    margin-bottom: 5rem;
+  }
+  .contact__title {
+    font-size: 3rem;
+  }
+  .contact__info-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contact__subheader {
+    font-size: 0.875rem;
+  }
+  .contact__subheader-wrapper {
+    width: 40%;
+    margin: 0;
+  }
+  .contact__subheader-item {
+    font-size: 1.375rem;
+  }
+  .contact .card-wrapper {
+    width: 55%;
+    margin: 2.5rem 0;
+  }
+  .contact .card__info {
+    font-size: 1.5rem;
+  }
+  .access {
+    padding: 6rem 8rem 6rem;
+  }
+  .access__info-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .access__subheader {
+    font-size: 0.875rem;
+  }
+  .access__subheader-wrapper {
+    width: 40%;
+    margin: 0;
+  }
+  .access__subheader-item {
+    font-size: 1.375rem;
+  }
+  .access .card-wrapper {
+    width: 55%;
+  }
+  .access .card__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .access .card__info-access, .access .card__info-address {
+    padding: 0;
     width: 30%;
+  }
+  .access .card__info-data, .access .card__info-text {
+    padding: 0 0 0.5rem;
+  }
+  .access .card__info-access-wrapper, .access .card__info-data {
+    width: 70%;
+  }
+  .access .card__info-subheader {
+    padding: 0 0 0.5rem;
   }
 }
 

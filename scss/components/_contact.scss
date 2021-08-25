@@ -1,0 +1,193 @@
+.contact {
+    padding: 9rem 1.5rem 0rem;
+    line-height: 1.5;
+    &__header {
+        margin-bottom: 2rem;
+        @include flex($justify-content: space-between, $align-items: center);
+    }
+    &__subheader {
+        font-size: 0.75rem;
+        position: relative;
+        padding-left: 10px;
+        &::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background-color: $contact-info;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+        }
+        &-wrapper {
+            margin: 2rem 0;
+        }
+        &-item {
+            font-size: 1.125rem;
+            margin-top: 1.5rem;
+        }
+    }   
+
+    .card {
+        &__text {
+            font-size: 0.875rem;
+        }
+        &__info {
+            display: flex;
+            padding: 0.5rem 0;
+            &-wrapper {
+                margin-top: 2.5rem;
+                padding: 2.5rem 0;
+                border-top: 1px solid $silver_underline;
+            }
+            &-tell,
+            &-mail {
+                width: 5rem;
+                color: $contact-info;
+            }
+        }
+    }
+
+    .new-line {
+        display: block;
+    }
+}
+
+.access {
+    background-color: $light-gray__background;
+    padding: 2.5rem 1.5rem 4.5rem;
+    line-height: 1.5;
+    &__subheader {
+        font-size: 0.75rem;
+        position: relative;
+        padding-left: 10px;
+        &::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background-color: $contact-info;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0%, -50%);
+        }
+        &-wrapper {
+            margin-top: 2rem;
+        }
+        &-item {
+            font-size: 1.125rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    .card {
+        &__info {
+            font-size: 0.875rem;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $silver_underline;
+            &-access,
+            &-address {
+                color: $access-info;
+                padding: 0.25rem 0;
+            }
+            &-subheader {
+                padding: 0.5rem 0;
+            }
+            &-text {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+@include md {
+    .contact {
+        padding: 10rem 5rem 2rem;
+        &__title {
+            font-size: 2rem;
+        }
+    }
+
+    .access {
+        padding: 2.5rem 5rem 4.5rem;
+    }
+}
+
+@include lg {
+    .contact {
+        padding: 10rem 8rem 3rem;
+        &__header {
+            margin-bottom: 5rem;
+        }
+        &__title {
+            font-size: 3rem;
+        }
+        &__info-wrapper {
+            @include flex($justify-content: space-between, $align-items: flex-start);
+        }
+        &__subheader {
+            font-size: 0.875rem;
+            &-wrapper {
+                width: 40%;
+                margin: 0;
+            }
+            &-item {
+                font-size: 1.375rem;
+            }
+        }
+        .card {
+            &-wrapper {
+                width: 55%;
+                margin: 2.5rem 0;
+            }
+            &__info {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .access {
+        padding: 6rem 8rem 6rem;
+        &__info-wrapper {
+            @include flex($justify-content: space-between, $align-items: flex-start);
+        }
+        &__subheader {
+            font-size: 0.875rem;
+            &-wrapper {
+                width: 40%;
+                margin: 0;
+            }
+            &-item {
+                font-size: 1.375rem;
+            }
+        }
+        .card {
+            &-wrapper {
+                width: 55%;
+            }
+            &__info {
+                @include flex($justify-content: space-between);
+                &-access,
+                &-address {
+                    padding: 0;
+                    width: 30%;
+                }
+                &-data,
+                &-text {
+                    padding: 0 0 0.5rem;
+                }
+                &-access-wrapper,
+                &-data {
+                    width: 70%;
+                }
+                &-subheader {
+                    padding: 0 0 0.5rem;
+                }
+            }
+
+        }
+    }
+}

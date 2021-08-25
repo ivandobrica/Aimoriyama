@@ -1,5 +1,5 @@
 //check if the user is on homepage
-let current = window.location.pathname;
+// let current = window.location.pathname;
 let logoInner = document.querySelector(".logo-inner");
 let navLinks = document.querySelectorAll(".main-nav__item a");
 let navLang = document.querySelector(".lang");

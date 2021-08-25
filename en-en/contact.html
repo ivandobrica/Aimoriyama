@@ -107,88 +107,59 @@
                 <div class="nav-overlay__image"></div>
             </div>
         </div>
-
-        <div class="banner">
-            <div class="banner__hero hero1" style="display: block;"></div>
-            <div class="banner__hero hero2"></div>
-            <div class="banner__hero hero3"></div>
-            <div class="banner__hero hero4"></div>
-            <h1 class="banner__title"><span class="new-line">Aimoriyama is</span> <span class="new-line">a Kurume Kasuri studio</span> that was established in Ansei 5.</h1>
-            <div class="banner__info">
-                <div class="loader">
-                    <button class="loader__circle is-active" onclick="currentSlide(1)">
-                        <svg class="svg">
-                            <circle class="svg__circle" r="10" cx="13" cy="13"></circle>
-                        </svg>
-                    </button>
-                    <button class="loader__circle" onclick="currentSlide(2)">
-                        <svg class="svg">
-                            <circle class="svg__circle"  r="10" cx="13" cy="13"></circle>
-                        </svg>
-                    </button>
-                    <button class="loader__circle" onclick="currentSlide(3)">
-                        <svg class="svg">
-                            <circle class="svg__circle" r="10" cx="13" cy="13"></circle>
-                        </svg>
-                    </button>
-                    <button class="loader__circle" onclick="currentSlide(4)">
-                        <svg class="svg">
-                            <circle class="svg__circle" r="10" cx="13" cy="13"></circle>
-                        </svg>
-                    </button>
-                </div>
-                <button class="scroll-btn">Scroll to content</button>
-            </div>
-        </div>
-        
     </header>
 
     <main class="main" id="main">
 
-        <section class="journal">
-            <div class="journal__header">
-                <h2 class="journal__title">Journal</h2>
-                <a class="journal__link" href="../en-en/journal.html">View All</a>
+        <section class="contact">
+            <div class="contact__header">
+                <h2 class="contact__title">Contact</h2>
             </div>
-            <div class="blog">
-                <a href="#">
-                    <picture>
-                        <source media="(min-width:1025px)" srcset="../assets/desktop/thumb.jpg">
-                        <img class="blog__image" loading="lazy" src="../assets/mobile/thumb.jpg" alt="">
-                    </picture>
-                    <div class="blog__info">
-                        <p class="blog__date">2021.08.12</p>
-                        <p class="blog__title">Aymoriyama's website is now open</p>
+            <div class="contact__info-wrapper">
+                <div class="contact__subheader-wrapper">
+                    <p class="contact__subheader">Contact Information</p>
+                    <p class="contact__subheader-item"><span class="new-line">For more information,</span> please contact us.</p>
+                </div>
+                <div class="card-wrapper">
+                    <p class="card__text">Please feel free to contact us if you would like to make reservations for a tour or experience, if you would like to inquire about interviews, or if you would like to learn more about Kurume Kasuri.</p>
+                    <div class="card__info-wrapper">
+                        <div class="card__info">
+                            <p class="card__info-tell">Tell</p>
+                            <a class="card__info-data" href="tel:0972-84-0061">0972-84-0061</a>
+                        </div>
+                        <div class="card__info">
+                            <p class="card__info-mail">Mail</p>
+                            <a class="card__info-data" href="mailto:info@test-aimoriyama.com">info@test-aimoriyama.com</a>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
 
-        <section class="parallax">
-            <div class="parallax__wrapper">
-                <h2 class="parallax__title">Follow Us</h2>
-                <div class="box__wrapper">
-                    <div class="box box1">
-                        <a class="box__link" href="#">
-                            <i class="fab fa-facebook"></i>Facebook
-                        </a>
-                    </div>
+        <section class="access">
+            <div class="access__info-wrapper">
+                <div class="access__subheader-wrapper">
+                    <p class="access__subheader">
+                        Access Information</p>
+                    <p class="access__subheader-item">Access to Aimoriyama</p>
                 </div>
-                <div class="box__wrapper">
-                    <div class="box box2">
-                        <a class="box__link" href="#">
-                            <i class="fab fa-instagram"></i>Instagram
-                        </a>
+                <div class="card-wrapper">
+                    <div class="card__info">
+                        <p class="card__info-address">Address</p>
+                        <p class="card__info-data">109 Shindai, Hirokawa-cho, Yame County, Fukuoka 834-0115, Japan</p>
                     </div>
-                </div>
-                <div class="box__wrapper">
-                    <div class="box box3">
-                        <a class="box__link" href="#">
-                            <i class="fab fa-twitter"></i>Twitter
-                        </a>
+                    <div class="card__info">
+                        <p class="card__info-access">Access</p>
+                        <div class="card__info-access-wrapper">
+                            <p class="card__info-subheader">By car</p>
+                            <p class="card__info-text">Get off at the Hirokawa IC and follow Route 3 toward Yame. Turn right at the Kawase intersection, then left at the Kawase-nishi intersection, and the red-brick hut is the landmark of the workshop.</p>
+                            <p class="card__info-subheader">By public transportation</p>
+                            <p class="card__info-text">From JR Kurume Station or Nishitetsu Kurume Station, take Nishitetsu Bus No. 30, 31, or 32 bound for Yame, get off at Kawase Bus Stop, and walk 15 minutes.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <section class="pages">
@@ -261,9 +232,5 @@
 </body>
 <script src="../js/app.js"></script>
 <script src="../js/navigation.js"></script>
-<script src="../js/homepage.js"></script>
-<script src="../js/heroSlider.js"></script>
-<script src="../js/parallaxEffect.js"></script>
-<script src="../js/scrollToContent.js"></script>
 <script src="../js/viewheight.js"></script>
 </html>

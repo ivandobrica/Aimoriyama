@@ -115,20 +115,62 @@
         <section class="journal">
             <div class="journal__header">
                 <h2 class="journal__title">Journal</h2>
-                <a class="journal__link" href="../en-en/journal.html">View All</a>
             </div>
-            <div class="blog">
-                <a href="#">
-                    <picture>
-                        <source media="(min-width:1025px)" srcset="../assets/desktop/thumb.jpg">
-                        <img class="blog__image" loading="lazy" src="../assets/mobile/thumb.jpg" alt="">
-                    </picture>
-                    <div class="blog__info">
-                        <p class="blog__date">2021.08.12</p>
-                        <p class="blog__title">Aymoriyama's website is now open</p>
-                    </div>
-                </a>
+            <input type='hidden' id='current_page' />
+            <input type='hidden' id='show_per_page' />
+
+            <div class="journal__blog-wrapper">
+                <div class="blog">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width:1025px)" srcset="../assets/desktop/thumb.jpg">
+                            <img class="blog__image" loading="lazy" src="../assets/mobile/thumb.jpg" alt="">
+                        </picture>
+                        <div class="blog__info">
+                            <p class="blog__date">2021.03.12</p>
+                            <p class="blog__title">Aymoriyama's website is now open</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blog">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width:1025px)" srcset="../assets/desktop/thumb.jpg">
+                            <img class="blog__image" loading="lazy" src="../assets/mobile/thumb.jpg" alt="">
+                        </picture>
+                        <div class="blog__info">
+                            <p class="blog__date">2021.04.28</p>
+                            <p class="blog__title">Go ahead and contact us</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blog">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width:1025px)" srcset="../assets/desktop/thumb.jpg">
+                            <img class="blog__image" loading="lazy" src="../assets/mobile/thumb.jpg" alt="">
+                        </picture>
+                        <div class="blog__info">
+                            <p class="blog__date">2021.06.17</p>
+                            <p class="blog__title">Online Shop is now open</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blog">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width:1025px)" srcset="../assets/desktop/thumb.jpg">
+                            <img class="blog__image" loading="lazy" src="../assets/mobile/thumb.jpg" alt="">
+                        </picture>
+                        <div class="blog__info">
+                            <p class="blog__date">2021.08.05</p>
+                            <p class="blog__title">First look at our Workshop</p>
+                        </div>
+                    </a>
+                </div>
             </div>
+
+            <div class='pagination'></div>
         </section>
 
         <section class="pages">
@@ -139,7 +181,7 @@
                     <p class="card__link">Visit to Online Shop</p>
                 </a>
             </div>
-            <div class="card contact">
+            <div class="card contact-us">
                 <a href="../en-en/contact.html">
                     <h2 class="card__title">Contact Us</h2>
                     <p class="card__info">Please contact us.</p>
@@ -200,6 +242,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 <script src="../js/app.js"></script>
+<script src="../js/pagination.js"></script>
 <script src="../js/navigation.js"></script>
 <script src="../js/viewheight.js"></script>
 </html>

@@ -35,7 +35,7 @@
         &::before {
             content: "";
             height: 1px;
-            background-color: $grey_underline;
+            background-color: $footer_grey-underline;
             display: block;
             padding: 0 1.5rem;
         }
@@ -53,7 +53,7 @@
     
     .copyright {
         padding: 1rem 0 3rem;
-        color: $dark_grey;
+        color: $copywrite_dark-grey;
     }
 }
 
