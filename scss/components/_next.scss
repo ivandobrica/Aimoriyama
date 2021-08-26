@@ -1,42 +1,88 @@
-.pages {
-    padding: 1rem;
-    text-align: center;
-    .card {
-        padding: 3rem 0;
-        position: relative;
-        &__title {
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-        &__info {
-            font-size: 0.75rem;
-        }
-        &__link {
-            margin-top: 2rem;
-            border-bottom: 1px solid $silver_underline;
-            padding: 0.5rem;
-            display: inline-block;
+.next {
+    position: relative;
+    margin-top: 5rem;
+    &-container {
+        overflow: hidden;
+    }
+    &__image {
+        background-image: url(../../assets/mobile/link-sp.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 7rem 0;
+        transition: transform 500ms linear;
+        &:hover {
+            transform: scale(1.1);
         }
     }
-    .contact-us {
-        border-top: 1px solid $silver_underline;
+    &__text {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__heading {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    &__link {
+        position: relative;
+        padding-right: 2rem;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 20px;
+            height: 1px;
+            background-color: $white;
+            transform: translate(0, -50%);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 2px;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid $white;
+            border-right: 1px solid $white;
+            transform: rotate(45deg) translate(-2px, -50%);
+        }
+    }
+}
+
+@include md {
+    .next {
+        &__image {
+            padding: 10rem 0;
+        }
+        &__heading {
+            font-size: 2.75rem;
+        }
+        &__link {
+            font-size: 1.25rem;
+        }
     }
 }
 
 @include lg {
-    .pages {
-        padding: 6rem 1rem;
-        @include flex($justify-content: center, $align-items: center);
-        .card {
-            width: 50%;
-            &__title {
-                font-size: 2.25rem;
-                margin-bottom: 1rem;
-            }
+    .next {
+        margin-top: 10rem;
+        position: relative;
+        &__image {
+            background-image: url(../../assets/desktop/link@2x.jpg);
+            padding: 15rem;
         }
-        .contact-us {
-            border-top: none;
-            border-left: 1px solid $silver_underline;
+        &__text {
+            @include flex($justify-content: space-between, $align-items: center);
+            width: 100%;
+            padding: 0 15rem;
+        }
+        &__heading {
+            font-size: 3.75rem;
         }
     }
 }

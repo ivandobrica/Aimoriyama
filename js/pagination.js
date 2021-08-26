@@ -20,7 +20,7 @@ $(document).ready(function() {
     navigation_html += '<a class="next_link" href="javascript:next();">Next</a>';
     
     $('.pagination').html(navigation_html);
-    
+
     //add is-active class to the first page link
     $('.pagination .page_link:first').addClass('is-active');
     
@@ -29,8 +29,10 @@ $(document).ready(function() {
     
     //and show the first n (show_per_page) elements
     $('.journal__blog-wrapper').children().slice(0, show_per_page).css('display', 'block');
-});
 
+    //default style for prev link
+    $('.previous_link').addClass("is-disabled");
+});
 
 
 //Pagination JS

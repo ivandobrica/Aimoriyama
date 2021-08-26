@@ -1,0 +1,54 @@
+.pages {
+    padding: 1rem;
+    text-align: center;
+    .card {
+        padding: 3rem 0;
+        position: relative;
+        &__title {
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        &__info {
+            font-size: 0.75rem;
+        }
+        &__link {
+            margin-top: 2rem;
+            border-bottom: 1px solid $silver_underline;
+            padding: 0.5rem;
+            display: inline-block;
+        }
+    }
+    .contact-us {
+        border-top: 1px solid $silver_underline;
+    }
+}
+
+@include md {
+    .pages {
+        padding: 3rem 1rem;
+        @include flex($justify-content: center, $align-items: center);
+        .card {
+            width: 50%;
+            &__title {
+                font-size: 1.5rem;
+            }
+        }
+        .contact-us {
+            border-top: none;
+            border-left: 1px solid $silver_underline;
+        }
+    }
+}
+
+@include lg {
+    .pages {
+        padding: 6rem 1rem;
+        .card {
+            width: 50%;
+            &__title {
+                font-size: 2.25rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

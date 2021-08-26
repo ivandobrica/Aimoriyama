@@ -1,8 +1,8 @@
-//check if the user is on journal page
+//check if the user is on inner-pages
 let current = window.location.pathname;
-let journal = document.querySelectorAll(".journal");
-if (current == '/en-en/journal.html') {
-    for (let i=0; i < journal.length; i++) {
-        journal.item(i).classList.add("journal-page");
+let header = document.querySelectorAll(".header");
+if (current !== '/en-en/index.html') {
+    for (let i=0; i < header.length; i++) {
+        header.item(i).classList.add("page__header");
     }
 }

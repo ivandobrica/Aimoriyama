@@ -1,0 +1,19 @@
+.contact {
+    padding-top: 1rem;
+    @include lg {
+        padding-top: 0rem;
+    }
+}
+
+.access {
+    background-color: $light-gray__background;
+
+    .card__info {
+        border-bottom: 1px solid $silver_underline;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        display: block;
+        font-size: .875rem;
+        padding-top: 0;
+    }
+}

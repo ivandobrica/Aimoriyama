@@ -1,16 +1,36 @@
 @charset 'utf-8';
-
 //Abstracts
 @import "abstracts/__abstracts-dir";
-
 //Base Styles
 @import "base/__base-dir";
-
 //Components
 @import "components/__components-dir";
-
 //Layout
 @import "layouts/__layouts-dir";
-
 //Pages
 @import "pages/__pages-dir";
+
+
+.new-line {
+    display: block;
+}
+
+.padding-right {
+    padding-right: 1.5rem;
+    @include md {
+        padding-right: 5rem;
+    }
+    @include lg {
+        padding-right: 8rem;
+    }
+}
+
+.padding-left {
+    padding-left: 1.5rem;
+    @include md {
+        padding-left: 5rem;
+    }
+    @include lg {
+        padding-left: 8rem;
+    }
+}
