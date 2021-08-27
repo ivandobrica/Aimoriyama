@@ -1,7 +1,7 @@
 .parallax {
     padding: 3rem 1.5rem;
     position: relative;
-    background-image: url(../../assets/mobile/followus.jpg);
+    background-image: url(../../assets/mobile/index/followus-sp.jpg);
     background-attachment: fixed;
     background-size: cover;
     &__wrapper {
@@ -38,19 +38,18 @@
     }
 
     .box1 {
-        background-image: url(../../assets/mobile/facebook-sp.jpg);
+        background-image: url(../../assets/mobile/index/facebook-sp.jpg);
     }
     .box2 {
-        background-image: url(../../assets/mobile/instagram-sp.jpg);
+        background-image: url(../../assets/mobile/index/instagram-sp.jpg);
     }
     .box3 {
-        background-image: url(../../assets/mobile/twitter-sp.jpg);
+        background-image: url(../../assets/mobile/index/twitter-sp.jpg);
     }
 }
 
 @include md {
     .parallax {
-        background-image: url(../../assets/desktop/followus.jpg);
         @include flex($justify-content: center, $align-items: center);
         &__wrapper {
             width: 90%;
@@ -74,6 +73,7 @@
 
 @include lg {
     .parallax {
+        background-image: url(../../assets/desktop/index/followus@2x.jpg);
         &__wrapper {
             margin: 4rem 0;
             flex-wrap: nowrap;
@@ -85,6 +85,16 @@
         .box__wrapper {
             width: 24%;
             margin: 0;
+        }
+
+        .box1 {
+            background-image: url(../../assets/desktop/index/facebook@2x.jpg);
+        }
+        .box2 {
+            background-image: url(../../assets/desktop/index/instagram@2x.jpg);
+        }
+        .box3 {
+            background-image: url(../../assets/desktop/index/twitter@2x.jpg);
         }
     }
 }

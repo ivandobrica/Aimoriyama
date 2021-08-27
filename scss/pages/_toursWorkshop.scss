@@ -1,0 +1,23 @@
+.workshop {
+    border-bottom: 1px solid $silver_underline;
+}
+
+.how-workshop {
+    .card__text:not(:last-of-type) {
+        border-bottom: 1px solid $silver_underline;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@include lg {
+    .how-workshop {
+        .card {
+            &-wrapper {
+                margin-top: 1.5rem;
+            }
+            &__list-item:first-of-type {
+                margin-top: 0;
+            }    
+        }
+    }
+}
