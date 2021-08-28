@@ -1,0 +1,68 @@
+.article {
+    padding: 0rem 1.5rem 3rem;
+    &__date {
+        color: $journal-date_light-grey;
+        font-size: 0.75rem;
+    }
+    &__title {
+        padding: 0.5rem 0;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    .card-wrapper {
+        margin-top: 2rem;
+    }
+    
+    &__pagination {
+        @include flex($justify-content: space-around, $align-items: center);
+    }
+    &__prev {
+        width: auto;
+        position: relative;
+        font-size: .875rem;
+        padding-left: 1.5rem!important;
+        @include arrow-before($top: 45%, $left: 0, $background-color: $black, $transform: translate(0px, -45%));
+        @include arrow-after($top: 40%, $left: 2px, $border-top: 1px solid $black, $border-left: 1px solid $black, $transform: rotate(-45deg) translate(-1px, -40%));
+    }
+    &__next {
+        width: auto;
+        position: relative;
+        font-size: .875rem;
+        padding-right: 1.5rem!important;
+        @include arrow-before($top: 45%, $right: 0, $background-color: $black, $transform: translate(0px, -45%));
+        @include arrow-after($top: 44%, $right: 1px, $border-top: 1px solid $black, $border-right: 1px solid $black, $transform: rotate(45deg) translate(-1px, -44%));
+    }
+    &__back {
+        font-size: .875rem;
+        width: auto;
+    }
+}
+
+
+
+@include md {
+    .article {
+        padding: 0rem 5rem 3rem;
+    }
+}
+
+@include lg {
+    .article {
+        padding: 0rem 8rem 3rem;
+        &__blog {
+            @include flex($justify-content: space-between);
+        }
+        &__info {
+            width: 35%;
+        }
+        &__card {
+            width: 60%;
+            height: 100%;
+        }
+
+        .card-wrapper {
+            width: 100%;
+        }
+    }
+}

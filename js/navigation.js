@@ -11,6 +11,7 @@ $(document).ready(function(){
         $(".nav-overlay").fadeToggle(400);
         $(".nav-overlay__nav").fadeToggle(400);
         $(".main-nav__wrapper .lang").fadeToggle(400);
+        $(".logo-inner").toggleClass("is-white");
     });
 });
 

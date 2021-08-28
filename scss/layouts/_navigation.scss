@@ -20,7 +20,7 @@
             fill: $black;
         }
         &-white {
-            fill: white;
+            fill: $white;
         }
     }
 
@@ -33,10 +33,10 @@
             color: $black;
         }
         &-white {
-            color: white;
+            color: $white;
         }
         .is-active {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid $white;
         }
     }
 
@@ -84,6 +84,10 @@
             top: 50%;
             left: 25%;
         }
+    }
+
+    .is-white {
+        fill: $white;
     }
 }
 
@@ -142,7 +146,7 @@
             color: $white;
         }
         .is-active {
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid $white;
         }
     }
 
@@ -301,12 +305,3 @@
         padding: 1rem 5rem;
     }
 }
-
-
-
-
-
-
-
-
-

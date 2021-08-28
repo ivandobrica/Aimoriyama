@@ -6,3 +6,13 @@ if (current !== '/en-en/index.html') {
         header.item(i).classList.add("page__header");
     }
 }
+
+//check if first or last journal article
+let articlePrev = document.querySelector(".article__prev");
+let articleNext = document.querySelector(".article__next");
+if (current == '/en-en/journal/10.html') {
+    articlePrev.classList.add("is-disabled");
+} 
+else if(current == '/en-en/journal/40.html') {
+    articleNext.classList.add("is-disabled");
+}

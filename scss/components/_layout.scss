@@ -21,7 +21,7 @@
         }
         &-item {
             font-size: 1.125rem;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
     }
 
@@ -72,6 +72,17 @@
                 font-size: 0.75rem;
             }
         }
+        &__heading {
+            margin-bottom: 0.5rem;
+        }
+        &__button {
+            font-size: 0.875rem;
+            position: relative;
+            display: inline;
+            padding-right: 2rem;
+            @include arrow-before($top: 47%, $right: 0, $background-color: $black, $transform: translate(0px, -47%));
+            @include arrow-after($top: 43%, $right: 1px, $border-top: 1px solid $black, $border-right: 1px solid $black, $transform: rotate(45deg) translate(-1px, -43%));
+        }
     }
 }
 
@@ -120,6 +131,9 @@
                 &-data {
                     font-size: 0.875rem;
                 }
+            }
+            &__heading {
+                font-size: 1.375rem;
             }
         }
     }

@@ -46,3 +46,34 @@ $screen-xl-min: 1201px;
     flex-direction: $flex-direction;
     flex-wrap: $flex-wrap;
 }
+
+
+@mixin arrow-before($top: null, $right: null, $left: null, $background-color: null, $transform: null) {
+    &::before {
+        content: "";
+        position: absolute;
+        right: $right;
+        top: $top;
+        left: $left;
+        width: 15px;
+        height: 1px;
+        background-color: $background-color;
+        transform: $transform;
+    }
+}
+
+@mixin arrow-after($top: null, $right: null, $left: null, $border-top: null, $border-right: null, $border-left: null, $transform: null) {
+    &::after {
+        content: "";
+        position: absolute;
+        right: $right;
+        top: $top;
+        left: $left;
+        width: 6px;
+        height: 6px;
+        border-top: $border-top;
+        border-right: $border-right;
+        border-left: $border-left;
+        transform: $transform;
+    }
+}

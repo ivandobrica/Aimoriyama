@@ -6,27 +6,8 @@
         position: relative;
         padding-right: 2.5rem;
         font-size: 0.875rem;
-        &::before {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 20px;
-            height: 1px;
-            background-color: $black;
-            transform: translate(0px, 6px);
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 8px;
-            height: 8px;
-            border-top: 1px solid $black;
-            border-right: 1px solid $black;
-            transform: rotate(45deg) translate(1px, 2px);
-        }
+        @include arrow-before($top: 47%, $right: 0, $background-color: $black, $transform: translate(0px, -47%));
+        @include arrow-after($top: 43%, $right: 1px, $border-top: 1px solid $black, $border-right: 1px solid $black, $transform: rotate(45deg) translate(-1px, -43%));
     }
 }
 
