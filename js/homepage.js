@@ -4,7 +4,7 @@ let navLinks = document.querySelectorAll(".main-nav__item a");
 let navLang = document.querySelector(".lang");
 let langLinks = document.querySelectorAll(".lang__item");
 let togglerButton = document.querySelector(".toggler");
-if ((current == '/index.html') || (current == '/ja-ja/index.html')) {
+if ((current == '/index.html') || (current == '/ja-ja/index.html') || (current == '/Aimoriyama/ja-ja/index.html') || (current == '/Aimoriyama/index.html') || (current == '/Aimoriyama/')) {
   logoInner.classList.add("logo-white");
   navLang.classList.add("lang-white");
   togglerButton.classList.add("toggler-transparent");
