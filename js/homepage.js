@@ -1,11 +1,10 @@
 //check if the user is on homepage
-// let current = window.location.pathname;
 let logoInner = document.querySelector(".logo-inner");
 let navLinks = document.querySelectorAll(".main-nav__item a");
 let navLang = document.querySelector(".lang");
 let langLinks = document.querySelectorAll(".lang__item");
 let togglerButton = document.querySelector(".toggler");
-if (current == '/en-en/index.html') {
+if ((current == '/index.html') || (current == '/ja-ja/index.html')) {
   logoInner.classList.add("logo-white");
   navLang.classList.add("lang-white");
   togglerButton.classList.add("toggler-transparent");

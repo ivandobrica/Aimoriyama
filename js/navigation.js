@@ -18,13 +18,14 @@ $(document).ready(function(){
 //check lang and add active class
 let en = document.querySelectorAll(".en");
 let ja = document.querySelectorAll(".ja");
-if(window.location.href.indexOf("en-en") != -1) {
-    for (let i=0; i < en.length; i++) {
-        en.item(i).classList.add("is-active");
-    }
-} 
-else {
+if(window.location.href.indexOf("ja-ja") != -1) {
+    
     for (let i=0; i < ja.length; i++) {
         ja.item(i).classList.add("is-active");
+    }
+}
+else {
+    for (let i=0; i < en.length; i++) {
+        en.item(i).classList.add("is-active");
     }
 }
