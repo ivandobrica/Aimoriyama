@@ -1,0 +1,58 @@
+.carousel {
+    position: relative;
+
+    .slider {
+        display: flex;
+        overflow: hidden;
+        &__slide {
+            min-width: 100vw;
+            width: 100%;
+        }
+    }
+
+    .buttons {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        @include flex($justify-content: space-between);
+        padding: 0 1rem;
+    }
+
+    .right-arrow,
+    .left-arrow {
+        border: 1px solid $btn_border;
+        background-color: transparent;
+        color: $btn_border;
+        cursor: pointer;
+        padding: 0.875rem;
+        border-radius: 50%;
+        outline: none;
+        @include flex($justify-content: space-between, $align-items: center);
+    }
+}
+
+@include md {
+    .carousel {
+        .right-arrow,
+        .left-arrow {
+            padding: 1.5rem;
+        }
+    }
+}
+
+@include lg {
+    .carousel {
+        .buttons {
+            padding: 0 3rem;
+        }
+        .right-arrow,
+        .left-arrow {
+            &:hover {
+                background-color: $btn_border;
+                color: $black;
+            }
+        }
+    }
+}

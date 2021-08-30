@@ -1,6 +1,6 @@
 @font-face {
   font-family: "OptimaLTProRoman";
-  src: url("../OptimaLTProRoman.woff2") format("woff");
+  src: url("../assets/OptimaLTProRoman.woff2") format("woff");
 }
 
 * {
@@ -1244,6 +1244,76 @@ ul {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+  }
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel .slider__slide {
+  min-width: 100vw;
+  width: 100%;
+}
+
+.carousel .buttons {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.carousel .right-arrow,
+.carousel .left-arrow {
+  border: 1px solid #E5E5E5;
+  background-color: transparent;
+  color: #E5E5E5;
+  cursor: pointer;
+  padding: 0.875rem;
+  border-radius: 50%;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .carousel .right-arrow,
+  .carousel .left-arrow {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .carousel .buttons {
+    padding: 0 3rem;
+  }
+  .carousel .right-arrow:hover,
+  .carousel .left-arrow:hover {
+    background-color: #E5E5E5;
+    color: #000;
   }
 }
 
