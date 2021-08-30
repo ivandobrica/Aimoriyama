@@ -1,11 +1,10 @@
 "use strict";
-const leftArrow = document.querySelector(".left-arrow"),
-  rightArrow = document.querySelector(".right-arrow"),
-  slider = document.querySelector(".slider");
+const leftArrow = document.querySelector(".left-arrow");
+const leftArrowIcon = document.querySelector(".fa-arrow-left");
+const rightArrow = document.querySelector(".right-arrow");
+const rightArrowIcon = document.querySelector(".fa-arrow-right");
+const slider = document.querySelector(".slider");
 
-/**
- * @brief Scroll to the right
- */
 function scrollRight() {
   if (slider.scrollWidth - slider.clientWidth === slider.scrollLeft) {
     slider.scrollTo({
@@ -20,9 +19,6 @@ function scrollRight() {
   }
 }
 
-/**
- * @brief Scroll to the left
- */
 function scrollLeft() {
   slider.scrollBy({
     left: -window.innerWidth,
@@ -33,9 +29,6 @@ function scrollLeft() {
 // Auto slider
 let timerId = setInterval(scrollRight, 7000);
 
-/**
- * @brief Reset timer for scrolling right
- */
 function resetTimer() {
   clearInterval(timerId);
   timerId = setInterval(scrollRight, 7000);
@@ -43,14 +36,14 @@ function resetTimer() {
 
 // Scroll Events
 slider.addEventListener("click", function (ev) {
-  if (ev.target === leftArrow) {
+  if ((ev.target === leftArrow) || (ev.target === leftArrowIcon)) {
     scrollLeft();
     resetTimer();
   }
 });
 
 slider.addEventListener("click", function (ev) {
-  if (ev.target === rightArrow) {
+  if ((ev.target === rightArrow) || (ev.target === rightArrowIcon)) {
     scrollRight();
     resetTimer();
   }
