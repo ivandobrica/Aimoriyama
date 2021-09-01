@@ -16,3 +16,32 @@ if ((current == '/en-en/journal/10.html') || (current == '/ja-ja/journal/10.html
 else if((current == '/en-en/journal/40.html') || (current == '/ja-ja/journal/40.html') || (current == '/Aimoriyama/en-en/journal/40.html') || (current == '/Aimoriyama/ja-ja/journal/40.html')) {
     articleNext.classList.add("is-disabled");
 }
+
+//fade-in animation js
+(function() {
+    let elements;
+    let windowHeight;
+  
+    function init() {
+      elements = document.querySelectorAll('.hidden');
+      windowHeight = window.innerHeight;
+    }
+  
+    function checkPosition() {
+      for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        let positionFromTop = elements[i].getBoundingClientRect().top;
+  
+        if (positionFromTop - windowHeight <= 0) {
+          element.classList.add('fade-in-element');
+          element.classList.remove('hidden');
+        }
+      }
+    }
+  
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', init);
+  
+    init();
+    checkPosition();
+  })();

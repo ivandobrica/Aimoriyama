@@ -22,6 +22,7 @@ html {
 img, a {
   width: 100%;
   height: 100%;
+  vertical-align: middle;
 }
 
 a {
@@ -104,6 +105,24 @@ ul {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -609,7 +628,7 @@ ul {
   position: relative;
   background-image: url(../assets/mobile/index/followus-sp.jpg);
   background-attachment: fixed;
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .parallax__wrapper {
@@ -2054,6 +2073,16 @@ ul {
   }
 }
 
+.next-about .next__image {
+  background-image: url(../assets/mobile/about/link-sp.jpg);
+}
+
+@media (min-width: 1025px) {
+  .next-about .next__image {
+    background-image: url(../assets/desktop/about/link@2x.jpg);
+  }
+}
+
 .new-line {
   display: block;
 }
@@ -2088,5 +2117,14 @@ ul {
   .padding-left {
     padding-left: 8rem;
   }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.fade-in-element {
+  -webkit-animation: fade-in 2s 500ms backwards;
+          animation: fade-in 2s 500ms backwards;
 }
 /*# sourceMappingURL=main.css.map */

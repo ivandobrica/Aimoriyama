@@ -10,7 +10,6 @@
 .gallery {
     @include flex($flex-direction: column);
     &__image {
-
         &-wrapper {
             @include flex($justify-content: center);
         }

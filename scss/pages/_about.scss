@@ -1,0 +1,13 @@
+.next-about {
+    .next__image {
+        background-image: url(../assets/mobile/about/link-sp.jpg);
+    }
+}
+
+@include lg {
+    .next-about {
+        .next__image {
+            background-image: url(../assets/desktop/about/link@2x.jpg);
+        }
+    }
+}
