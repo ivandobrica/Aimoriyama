@@ -11,6 +11,7 @@
   font-family: OptimaLTProRoman;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.8;
 }
 
 html {
@@ -222,7 +223,6 @@ ul {
 
 .layout {
   padding: 3rem 1.5rem;
-  line-height: 1.8;
 }
 
 .layout__subheader {
@@ -1358,6 +1358,104 @@ ul {
   .carousel .left-arrow:hover {
     background-color: #E5E5E5;
     color: #000;
+  }
+}
+
+.gallery-slider {
+  overflow: hidden;
+}
+
+.gallery-slider.cloth-gallery .galleria__item {
+  border: none;
+}
+
+.gallery-slider .galleria {
+  width: 100vw;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gallery-slider .galleria__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.gallery-slider .galleria__inner:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.gallery-slider .galleria__item {
+  border: 1px solid #E3E3E3;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  padding: 0 1rem;
+}
+
+.gallery-slider .galleria__item-img {
+  border: 1px solid #E3E3E3;
+  margin-top: 1rem;
+}
+
+.gallery-slider .galleria__item:first-of-type {
+  margin-left: 1.5rem;
+}
+
+.gallery-slider .galleria__item-heading {
+  font-size: 1.125rem;
+  padding: 1rem 0 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-slider .galleria__item-heading::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  height: 1px;
+  background-color: #E3E3E3;
+  margin-left: 10px;
+}
+
+.gallery-slider .galleria__item .number {
+  font-size: 0.75rem;
+  padding-right: 0.5rem;
+}
+
+.gallery-slider .galleria__item-desc {
+  font-size: 0.75rem;
+  padding: 0.5rem 0rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-slider .galleria__item:first-of-type {
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .gallery-slider .galleria__item:first-of-type {
+    margin-left: 8rem;
   }
 }
 
