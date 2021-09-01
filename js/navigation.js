@@ -29,3 +29,54 @@ else {
         en.item(i).classList.add("is-active");
     }
 }
+
+//change overlay image
+let aboutLink = document.querySelector(".about-link");
+let kurumeLink = document.querySelector(".kurume-link");
+let toursLink = document.querySelector(".tours-link");
+let journalLink = document.querySelector(".journal-link");
+let shopLink = document.querySelector(".shop-link");
+let contactLink = document.querySelector(".contact-link");
+let overlayImage = document.querySelector(".nav-overlay__image");
+
+aboutLink.addEventListener("mouseover", function() {
+  overlayImage.classList.add("about-img");
+})
+aboutLink.addEventListener("mouseout", function() {
+  overlayImage.classList.remove("about-img");
+})
+
+kurumeLink.addEventListener("mouseover", function() {
+  overlayImage.classList.add("kurume-img");
+})
+kurumeLink.addEventListener("mouseout", function() {
+  overlayImage.classList.remove("kurume-img");
+})
+
+toursLink.addEventListener("mouseover", function() {
+  overlayImage.classList.add("tours-img");
+})
+toursLink.addEventListener("mouseout", function() {
+  overlayImage.classList.remove("tours-img");
+})
+
+journalLink.addEventListener("mouseover", function() {
+  overlayImage.classList.add("journal-img");
+})
+journalLink.addEventListener("mouseout", function() {
+  overlayImage.classList.remove("journal-img");
+})
+
+contactLink.addEventListener("mouseover", function() {
+  overlayImage.classList.add("contact-img");
+})
+contactLink.addEventListener("mouseout", function() {
+  overlayImage.classList.remove("contact-img");
+})
+
+shopLink.addEventListener("mouseover", function() {
+  overlayImage.classList.add("shop-img");
+})
+shopLink.addEventListener("mouseout", function() {
+  overlayImage.classList.remove("shop-img");
+})

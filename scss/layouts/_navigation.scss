@@ -134,6 +134,7 @@
         background-size: 100% 100%;
         background-position: center;
         display: block;
+        animation: zoom-out 3s;
     }
     &__info {
         @include flex($justify-content: space-between, $align-items: center);
@@ -274,6 +275,7 @@
             height: 100%;
             background-repeat: no-repeat;
             background-size: 100% 100%;
+            opacity: 1;
         }
         .social {
             padding: 2rem 0;
@@ -288,6 +290,25 @@
             &__item {
                 font-size: 0.825rem;
             }
+        }
+        
+        .about-img {
+            background-image: url(../assets/desktop/index/about@2x.jpg);
+        }
+        .tours-img {
+            background-image: url(../assets/desktop/index/tours-and-workshop@2x.jpg);
+        }
+        .kurume-img {
+            background-image: url(../assets/desktop/index/kurume-kasuri@2x.jpg);
+        }
+        .contact-img {
+            background-image: url(../assets/desktop/index/contact@2x.jpg);
+        }
+        .journal-img {
+            background-image: url(../assets/desktop/index/journal@2x.jpg);
+        }
+        .shop-img {
+            background-image: url(../assets/desktop/index/onlineshop@2x.jpg);
         }
     }
 }
