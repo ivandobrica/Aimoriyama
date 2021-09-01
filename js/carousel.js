@@ -6,45 +6,45 @@ const rightArrowIcon = document.querySelector(".fa-arrow-right");
 const slider = document.querySelector(".slider");
 
 function scrollRight() {
-  if (slider.scrollWidth - slider.clientWidth === slider.scrollLeft) {
-    slider.scrollTo({
-      left: 0,
-      behavior: "smooth"
-    });
-  } else {
-    slider.scrollBy({
-      left: window.innerWidth,
-      behavior: "smooth"
-    });
-  }
+	if (slider.scrollWidth - slider.clientWidth === slider.scrollLeft) {
+		slider.scrollTo({
+			left: 0,
+			behavior: "smooth"
+		});
+	} else {
+		slider.scrollBy({
+			left: window.innerWidth,
+			behavior: "smooth"
+		});
+	}
 }
 
 function scrollLeft() {
-  slider.scrollBy({
-    left: -window.innerWidth,
-    behavior: "smooth"
-  });
+	slider.scrollBy({
+		left: -window.innerWidth,
+		behavior: "smooth"
+	});
 }
 
 // Auto slider
 let timerId = setInterval(scrollRight, 7000);
 
 function resetTimer() {
-  clearInterval(timerId);
-  timerId = setInterval(scrollRight, 7000);
+	clearInterval(timerId);
+	timerId = setInterval(scrollRight, 7000);
 }
 
 // Scroll Events
 slider.addEventListener("click", function (ev) {
-  if ((ev.target === leftArrow) || (ev.target === leftArrowIcon)) {
-    scrollLeft();
-    resetTimer();
-  }
+	if ((ev.target === leftArrow) || (ev.target === leftArrowIcon)) {
+		scrollLeft();
+		resetTimer();
+	}
 });
 
 slider.addEventListener("click", function (ev) {
-  if ((ev.target === rightArrow) || (ev.target === rightArrowIcon)) {
-    scrollRight();
-    resetTimer();
-  }
+	if ((ev.target === rightArrow) || (ev.target === rightArrowIcon)) {
+		scrollRight();
+		resetTimer();
+	}
 });

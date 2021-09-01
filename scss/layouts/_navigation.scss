@@ -38,6 +38,9 @@
         .is-active {
             border-bottom: 1px solid $white;
         }
+        .is-active-black {
+            border-bottom: 1px solid $black;
+        }
     }
 
     .toggler {
@@ -148,6 +151,9 @@
         }
         .is-active {
             border-bottom: 1px solid $white;
+        }
+        .is-active-black {
+            border-bottom: 1px solid $black;
         }
     }
 

@@ -1526,6 +1526,10 @@ ul {
   border-bottom: 1px solid #fff;
 }
 
+.main-nav .lang .is-active-black {
+  border-bottom: 1px solid #000;
+}
+
 .main-nav .toggler {
   background-color: #fff;
   width: 3rem;
@@ -1678,6 +1682,10 @@ ul {
 
 .nav-overlay .lang .is-active {
   border-bottom: 1px solid #fff;
+}
+
+.nav-overlay .lang .is-active-black {
+  border-bottom: 1px solid #000;
 }
 
 .nav-overlay .social {
@@ -2245,5 +2253,24 @@ ul {
 .fade-in-element {
   -webkit-animation: fade-in 2s 500ms backwards;
           animation: fade-in 2s 500ms backwards;
+}
+
+.circle {
+  display: none;
+}
+
+.gallery-slider:hover .circle {
+  display: block;
+  position: absolute;
+  color: #000;
+  background-color: #fff;
+  z-index: 99;
+  border: 1px solid #E3E3E3;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  pointer-events: none;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

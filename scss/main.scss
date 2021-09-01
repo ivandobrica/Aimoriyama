@@ -42,3 +42,24 @@
 .fade-in-element {
     animation: fade-in 2s 500ms backwards;
 }
+
+.circle {
+   display: none;
+}
+
+.gallery-slider:hover {
+    .circle {
+        display: block;
+        position: absolute;
+        color: $black;
+        background-color: $white;
+        z-index: 99;
+        border: 1px solid $silver_underline;
+        width: 60px; 
+        height: 60px; 
+        line-height: 60px;
+        border-radius: 50%;
+        pointer-events: none;
+        text-align: center;
+    }
+}
