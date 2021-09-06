@@ -17,12 +17,7 @@ $(document).ready(function () {
 //check  if the user is on inner-pages and add active classes
 let en = document.querySelectorAll(".en");
 let ja = document.querySelectorAll(".ja");
-if (
-	(current !== "/index.html") &
-	(current !== "/ja-ja/index.html") &
-	(current !== "/Aimoriyama/index.html") &
-	(current !== "/Aimoriyama/") &
-	(current !== "/Aimoriyama/ja-ja/index.html")
+if ((current !== "/index.html") & (current !== "/ja-ja/index.html") & (current !== "/Aimoriyama/index.html") & (current !== "/Aimoriyama/") & (current !== "/Aimoriyama/ja-ja/index.html")
 ) {
 	if (window.location.href.indexOf("ja-ja") != -1) {
 		for (let i = 0; i < ja.length; i++) {
