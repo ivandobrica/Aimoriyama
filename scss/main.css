@@ -1179,10 +1179,6 @@ ul {
   margin: 2rem 0;
 }
 
-.story__image {
-  background-color: #131922;
-}
-
 .story .card__subheader {
   font-size: 0.75rem;
   position: relative;
@@ -2089,10 +2085,6 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.gallery__image {
-  background-color: #131922;
 }
 
 .gallery__image-wrapper {
