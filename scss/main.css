@@ -235,7 +235,7 @@ ul {
   content: "";
   width: 4px;
   height: 4px;
-  background-color: rgba(19, 25, 34, 0.5);
+  background-color: rgba(19, 25, 34, 0.6);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -273,7 +273,7 @@ ul {
 
 .layout .card__info-tell, .layout .card__info-mail {
   width: 5rem;
-  color: rgba(19, 25, 34, 0.5);
+  color: rgba(19, 25, 34, 0.6);
 }
 
 .layout .card__access, .layout .card__address {
@@ -1189,7 +1189,7 @@ ul {
   content: "";
   width: 4px;
   height: 4px;
-  background-color: rgba(19, 25, 34, 0.5);
+  background-color: rgba(19, 25, 34, 0.6);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -2207,6 +2207,49 @@ ul {
 @media (min-width: 1025px) {
   .next-about .next__image {
     background-image: url(../assets/desktop/about/link@2x.jpg);
+  }
+}
+
+.countdown {
+  color: #000;
+  padding: 2rem 1.5rem;
+}
+
+.countdown__item {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+.countdown__numbers {
+  padding: 0.25rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .countdown {
+    padding: 2rem 5rem;
+  }
+  .countdown__item {
+    text-align: center;
+  }
+  .countdown__numbers {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .countdown {
+    padding: 2rem 8rem;
+  }
+  .countdown__item {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .countdown__numbers {
+    font-size: 3rem;
   }
 }
 
