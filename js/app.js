@@ -63,3 +63,10 @@ jQuery(document).ready(function() {
 		$(".circle").css({left: xp +'px', top: yp +'px'});
 	}, 20);
 });
+
+
+//parallax effect on images
+let parallaxDown = document.querySelectorAll('.parallax-down');
+new simpleParallax(parallaxDown, {
+	orientation: 'down'
+});
