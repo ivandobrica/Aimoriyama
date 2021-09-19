@@ -1,4 +1,6 @@
 # Aimoriyama
-Aimoriyama website clone
+Aimoriyama website clone used only for practice purpose
 
-https://ivandobrica.github.io/Aimoriyama/
+Aimoriyama website clone available on: https://ivandobrica.github.io/Aimoriyama/
+
+Original website available on https://aimoriyama.com/en/
